@@ -39,24 +39,19 @@ to the minority training count; fewer than two examples per class is rejected.
 Validation BCE selects a model; held-out test rows are evaluated after selection.
 The CPU command uses the original sigmoid output, BCE loss, and Adagrad optimizer.
 
-Generated weights, scaler, metadata, and metrics stay under the fresh output
-directory. Input datasets, pretrained checkpoints, results, and paper files
-are excluded from the repository.
+The command saves model weights, the fitted scaler, run metadata, and
+evaluation metrics in the output directory.
 
-## Implementation scope
+## Implementation
 
-`resnet_smote/model.py` retains `ResidualBlock` and `Model` from the original
-research script. This is the original convolutional residual architecture,
-not the later tabular attention-network variants found in working directories.
-The surrounding CLI is a maintained release interface. Preprocessing is fitted
-on training rows; independent test encoders and test-driven model selection
-from later experimental scripts are not used. Software validation does not
-re-establish the paper's published measurements.
+`resnet_smote/model.py` defines `ResidualBlock` and `Model`, the convolutional
+residual architecture used for binary flow classification. Preprocessing is
+fitted on training rows, and model selection uses the validation partition.
 
 The model treats feature values as channels with sequence length one, matching
 the source implementation. Batch-normalized training uses batches of at least
 two rows; a singleton final training batch is dropped. Evaluation uses all test
-rows. This release is binary; it does not claim multiclass benchmark reproduction.
+rows.
 
 ## Development and citation
 
