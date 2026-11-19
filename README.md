@@ -9,6 +9,8 @@ a portable CSV command, and synthetic regression checks.
 
 **Authors:** Ali Alfatemi, Mohamed Rahouti, Ruhul Amin, Sarah ALJamal, Kaiqi Xiong, Yufeng Xin
 
+**Publication:** AAAI-24 Workshop on Artificial Intelligence for Cyber Security (AICS), February 26, 2024, Vancouver, Canada. [Accepted-paper record](https://aics.site/AICS2024/program.html).
+
 **Paper DOI:** https://doi.org/10.48550/arXiv.2401.03116
 
 ## Installation
