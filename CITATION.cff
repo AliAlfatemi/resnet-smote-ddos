@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this implementation, please cite the accompanying paper."
+type: software
+title: "resnet-smote-ddos"
+authors:
+  - name: "Research software contributors"
+version: 0.1.0
+url: "https://github.com/AliAlfatemi/resnet-smote-ddos"
+preferred-citation:
+  type: article
+  title: "Advancing DDoS Attack Detection: A Synergistic Approach Using Deep Residual Neural Networks and Synthetic Oversampling"
+  doi: "10.48550/arXiv.2401.03116"
+  authors:
+    - family-names: "Alfatemi"
+      given-names: "Ali"
+    - family-names: "Rahouti"
+      given-names: "Mohamed"
+    - family-names: "Amin"
+      given-names: "Ruhul"
+    - family-names: "ALJamal"
+      given-names: "Sarah"
+    - family-names: "Xiong"
+      given-names: "Kaiqi"
+    - family-names: "Xin"
+      given-names: "Yufeng"
+  year: 2024
+  journal: "arXiv"

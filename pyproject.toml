@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resnet-smote-ddos"
+version = "0.1.0"
+description = "Original residual-network model with training-only SMOTE for offline binary DDoS classification"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Research software contributors"}]
+dependencies = ["torch>=2.2", "numpy>=1.26", "pandas>=2.2", "scikit-learn>=1.4", "imbalanced-learn>=0.12", "joblib>=1.3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=9", "build>=1.2"]
+
+[project.urls]
+Repository = "https://github.com/AliAlfatemi/resnet-smote-ddos"
+Paper = "https://doi.org/10.48550/arXiv.2401.03116"
+Issues = "https://github.com/AliAlfatemi/resnet-smote-ddos/issues"
+
+[project.scripts]
+resnet-smote-ddos = "resnet_smote.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["resnet_smote", "resnet_smote.*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
